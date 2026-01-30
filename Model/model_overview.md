@@ -1,4 +1,4 @@
-# Model Overview — LightGBM + Optuna (Horizon-Aware Features)
+# Model Overview — LightGBM
 
 This document describes the modeling approach implemented in `model.ipynb`.
 
@@ -39,7 +39,7 @@ This matches the competition’s forecasting horizon and avoids random leakage a
 **LightGBM (GBDT)** is used because:
 
 - It handles mixed feature types well
-- It supports **native categorical features** (when pandas dtype is `category`)
+- It supports **native categorical features**
 - It is strong on tabular time series when paired with lag/rolling features
 
 ## 3) Data Assembly & Cleaning
@@ -195,10 +195,3 @@ The best trial yields:
 - `sales_pred = expm1(y_pred_log)`
 - clip to `>= 0`
 - write `submission.csv` with columns: `id`, `sales`
-
-## 8) Repro Checklist
-
-1. Unzip `Data/store-sales-time-series-forecasting.zip` into `Data/raw/`
-2. Set `DATA_DIR = Path("../Data/raw")`
-3. Run all notebook cells
-4. Upload `submission.csv` to Kaggle
