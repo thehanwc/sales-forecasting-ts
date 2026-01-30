@@ -132,15 +132,6 @@ Store-level daily transaction counts.
 - Transaction counts are not provided for test dates in this bundle (they end at the train end date).
 - Leakage-safe modeling typically uses only lags/anchored features for transactions.
 
-## Practical Join Keys
-
-Common merges:
-
-- `stores.csv`: join by `store_nbr`
-- `oil.csv`: join by `date`
-- `transactions.csv`: join by (`store_nbr`, `date`)
-- `holidays_events.csv`: join by `date` + locale alignment (national vs state vs city)
-
 ## Expected Modeling Implications
 
 - **Sales are heavy-tailed** across families; log transforms are common.
