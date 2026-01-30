@@ -124,9 +124,3 @@ This repository represents the author’s individual analytical contribution and
 If you reference this work in academic or technical contexts, please cite it as:
 
 > Chang, H. W. (2026). Store Sales - Time Series Forecasting (LightGBM baseline). GitHub repository.
-
-* * *
-
-## Notes on Data Usage
-
-The dataset originates from Kaggle’s competition. Please ensure your usage complies with Kaggle’s dataset and competition terms.
