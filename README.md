@@ -6,8 +6,6 @@ Forecast daily unit sales for product families across Favorita stores using a gl
 ## Project Overview
 This repository contains an end-to-end pipeline (implemented in `model.ipynb`) for the Kaggle **Store Sales - Time Series Forecasting** competition. The goal is to predict **sales** for the dates in `test.csv` (the test period immediately follows the last date in `train.csv`).  
 The competition is evaluated using **RMSLE (Root Mean Squared Logarithmic Error)**, which motivates training on `log1p(sales)` and converting predictions back with `expm1`.  
-- Kaggle data description (test dates follow training): https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data?select=train.csv  
-- RMSLE metric references (Kaggle notebook examples): see references section.
 
 ## Key Ideas / Method
 This solution uses a **global LightGBM regressor** trained over all `(store_nbr, family)` series, with:
